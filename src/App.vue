@@ -5,6 +5,7 @@
       <router-link to="/slot">Slot数据流</router-link> |
       <router-link to="/props">Props数据流</router-link> |
       <router-link to="/mixins">Mixins</router-link> |
+      <router-link to="/emit">emit传参</router-link> |
     </div>
     <router-view/>
   </div>

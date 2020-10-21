@@ -24,6 +24,11 @@ const routes = [
     path: '/mixins',
     name: 'Mixins',
     component: () => import('../views/mixins/Mixins.vue')
+  },
+  {
+    path: '/emit',
+    name: 'Emit',
+    component: () => import('../views/emit传参/EmitFather.vue')
   }
 ]
 
