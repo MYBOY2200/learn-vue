@@ -2,7 +2,9 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/slot">Slot数据流</router-link> |
+      <router-link to="/props">Props数据流</router-link> |
+      <router-link to="/mixins">Mixins</router-link> |
     </div>
     <router-view/>
   </div>
