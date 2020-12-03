@@ -29,6 +29,11 @@ const routes = [
     path: '/emit',
     name: 'Emit',
     component: () => import('../views/emit传参/EmitFather.vue')
+  },
+  {
+    path: '/vfor',
+    name: 'Vfor',
+    component: () => import('../views/v-for渲染/Vfor.vue')
   }
 ]
 
