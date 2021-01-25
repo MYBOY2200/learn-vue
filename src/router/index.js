@@ -34,7 +34,21 @@ const routes = [
     path: '/vfor',
     name: 'Vfor',
     component: () => import('../views/v-for渲染/Vfor.vue')
+  },
+  {
+    path: '/from',
+    component: () => import('../views/query和params传参/from.vue')
+  },
+  {
+    path: '/query',
+    component: () => import('../views/query和params传参/query.vue')
+  },
+  {
+    path: '/:test',
+    name: 'params',
+    component: () => import('../views/query和params传参/params.vue')
   }
+
 ]
 
 const router = new VueRouter({

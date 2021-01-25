@@ -7,6 +7,7 @@
       <router-link to="/mixins">Mixins</router-link> |
       <router-link to="/emit">emit传参</router-link> |
       <router-link to="/vfor">v-for渲染</router-link> |
+      <router-link to="/from">query和params传参</router-link> |
     </div>
     <router-view/>
   </div>
