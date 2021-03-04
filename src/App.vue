@@ -8,6 +8,10 @@
       <router-link to="/emit">emit传参</router-link> |
       <router-link to="/vfor">v-for渲染</router-link> |
       <router-link to="/from">query和params传参</router-link> |
+      <router-link to="/gouzi">钩子触发</router-link> |
+      <router-link to="/image">本地图片</router-link> |
+      <router-link to="/prfrom">push和replace</router-link> |
+      <router-link to="/x1">vuex</router-link> |
     </div>
     <router-view/>
   </div>

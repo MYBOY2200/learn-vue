@@ -44,9 +44,39 @@ const routes = [
     component: () => import('../views/query和params传参/query.vue')
   },
   {
-    path: '/:test',
+    // path: '/:test', //不能这样写，不然后面声明的一级路由会取不到
+    path: '/params/:test',
     name: 'params',
     component: () => import('../views/query和params传参/params.vue')
+  },
+  {
+    path: '/gouzi',
+    name: 'gouzi',
+    component: () => import('../views/钩子触发/gouzi.vue')
+  },
+  {
+    path: '/image',
+    component: () => import('../views/本地图片/image.vue')
+  },
+  {
+    path: '/prfrom',
+    component: () => import('../views/push和replace/prfrom.vue')
+  },
+  {
+    path: '/push',
+    component: () => import('../views/push和replace/push.vue')
+  },
+  {
+    path: '/replace',
+    component: () => import('../views/push和replace/replace.vue')
+  },
+  {
+    path: '/x1',
+    component: () => import('../views/vuex/x1.vue')
+  },
+  {
+    path: '/x2',
+    component: () => import('../views/vuex/x2.vue')
   }
 
 ]

@@ -7,6 +7,10 @@
           <p>我是子组件的值:{{ slotProps.test }}</p>
         </div>
       </template>
+      <!-- 旧语法 -->
+      <!-- <template slot="aaa" slot-scope="slotProps">
+        {{ slotProps.test }}
+      </template> -->
     </slot-component>
   </div>
 </template>
