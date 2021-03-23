@@ -77,7 +77,19 @@ const routes = [
   {
     path: '/x2',
     component: () => import('../views/vuex/x2.vue')
-  }
+  },
+  {
+    path: '/directive',
+    component: () => import('../views/自定义指令/directive.vue')
+  },
+  {
+    path: '/dataset',
+    component: () => import('../views/元素dataset/dataset.vue')
+  },
+  {
+    path: '/render',
+    component: () => import('../views/渲染函数render/render.vue')
+  },
 
 ]
 

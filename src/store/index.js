@@ -3,6 +3,10 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+//在开发模式强制启用开发工具
+// then had to add in ./store.js as well.
+Vue.config.devtools = process.env.NODE_ENV === 'development'
+
 // 在main.js引入了此js文件会执行这些代码，但定义的变量在main.js是取不到的必须要export出去
 // const a = 'thereisnospoon' 
 // console.log(a)

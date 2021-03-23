@@ -12,6 +12,9 @@
       <router-link to="/image">本地图片</router-link> |
       <router-link to="/prfrom">push和replace</router-link> |
       <router-link to="/x1">vuex</router-link> |
+      <router-link to="/directive">自定义指令</router-link> |
+      <router-link to="/dataset">元素dataset</router-link> |
+      <router-link to="/render">渲染函数render</router-link> |
     </div>
     <router-view/>
   </div>
