@@ -90,6 +90,10 @@ const routes = [
     path: '/render',
     component: () => import('../views/渲染函数render/render.vue')
   },
+  {
+    path: '/filter',
+    component: () => import('../views/过滤器filter/filter.vue')
+  },
 
 ]
 
@@ -100,3 +104,5 @@ const router = new VueRouter({
 })
 
 export default router
+
+console.log(Object.prototype.toString.call([]))

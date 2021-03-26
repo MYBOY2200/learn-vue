@@ -2,7 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+//自定义指令
 import './assets/js/directive.js'
+//过滤器
+import './assets/js/filter.js'
 
 Vue.config.productionTip = false
 

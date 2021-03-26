@@ -15,6 +15,7 @@
       <router-link to="/directive">自定义指令</router-link> |
       <router-link to="/dataset">元素dataset</router-link> |
       <router-link to="/render">渲染函数render</router-link> |
+      <router-link to="/filter">过滤器filter</router-link> |
     </div>
     <router-view/>
   </div>
