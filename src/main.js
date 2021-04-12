@@ -6,6 +6,8 @@ import store from './store'
 import './assets/js/directive.js'
 //过滤器
 import './assets/js/filter.js'
+//全局组件
+import './assets/js/component.js'
 
 Vue.config.productionTip = false
 
