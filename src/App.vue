@@ -17,6 +17,7 @@
       <router-link to="/render">渲染函数render</router-link> |
       <router-link to="/filter">过滤器filter</router-link> |
       <router-link to="/component">全局定义组件</router-link> |
+      <router-link to="/computed">计算属性</router-link> |
     </div>
     <router-view/>
   </div>

@@ -98,6 +98,10 @@ const routes = [
     path: '/component',
     component: () => import('../views/全局定义组件/VueComponent.vue')
   },
+  {
+    path: '/computed',
+    component: () => import('../views/计算属性/Computed.vue')
+  },
 
 ]
 
