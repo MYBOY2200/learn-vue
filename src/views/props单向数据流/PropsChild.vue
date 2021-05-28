@@ -9,7 +9,7 @@
         <div><button @click="$set(arr,'0',10)">点击修改子组件数组props(不更换地址)</button></div>
 
         <!-- 同上传址的原因,不能直接修改引用类型数据本身(若用了slice就可以) -->
-        <div><button @click="$set(correct,'0',11)">不正确修改props(用了slice就可以)</button></div>
+        <div><button @click="$set(correct,'0',11)">正确修改props(用了slice就可以)</button></div>
 
         <!-- 更改了引用之后可以随意修改，即赋值一个原本数组的复制品或另一个数组 -->
         <div><button @click="correct = []">正确修改props</button></div>
