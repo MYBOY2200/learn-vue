@@ -102,6 +102,10 @@ const routes = [
     path: '/computed',
     component: () => import('../views/计算属性/Computed.vue')
   },
+  {
+    path: 'fuzzysearch',
+    component: () => import('../views/模糊搜索/FuzzySearch.vue')
+  }
 
 ]
 
