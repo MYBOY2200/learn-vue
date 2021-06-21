@@ -14,10 +14,15 @@
         <!-- 更改了引用之后可以随意修改，即赋值一个原本数组的复制品或另一个数组 -->
         <div><button @click="correct = []">正确修改props</button></div>
 
+        <!-- 更改了data值 -->
+        <div><button @click="getSet = [1]">子组件修改data</button></div>
+
         <p>test:{{test}}</p>
         <p>arr:{{arr}}</p>
         <p>correct:{{correct}}</p>
         <p>res:{{res}}</p>
+        <!-- <p>{{gtRes}}</p> -->
+        <p>getSet:{{getSet}}</p>
     </div>
 </template>
 
@@ -36,12 +41,20 @@ export default {
     data() {
         return {
             //用了slice后，地址就不是同一个，可以放心修改也不会影响父组件
-            correct: this.arr.slice()
+            correct: this.arr.slice(),
+            getSet: this.arr.slice()
         }
     },
     computed: {
+        //只有setter的计算属性，子组件只需要接受响应变化，而不需要对接受的prop外加处理时
         res() {
             return this.arr.slice().reverse()   
+        },
+    },
+    watch: {
+        //当父组件传值变化时，子组件watch接受改变，用data接收，data默认值为prop,子组件定义的data还可以另外修改
+        arr(val) {
+            this.getSet = val
         }
     }
 }
