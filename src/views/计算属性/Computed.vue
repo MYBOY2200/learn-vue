@@ -6,6 +6,12 @@
     <div>
         {{test1}} | {{test2}}
         <button @click="change">改变</button>
+        
+        <br>
+        <br>
+        <!-- 当有多个响应式依赖时 -->
+        {{test3}}
+        <button @click="change1">改变1</button>
     </div>
 </template>
 
@@ -17,7 +23,9 @@ export default {
     },
     data() {
         return {
-            a:1
+            a:1,
+            arr: [1,2,3,4,5],
+            index: 0
         }
     },
     computed: {
@@ -28,6 +36,10 @@ export default {
         //非响应式property变化了不会重新计算
         test2() {
             return this.b*2
+        },
+        //多个响应式property
+        test3() {
+            return this.arr[this.index]
         }
 
     },
@@ -38,6 +50,9 @@ export default {
             console.log(this.b) //4
             console.log(this.test2) //6(没改变)
             console.log(this.test1) //4(改变了)
+        },
+        change1() {
+            this.index = 2
         }
     }
 }

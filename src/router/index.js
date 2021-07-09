@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Slot from '../views/slot/Slot.vue'
+import Mixins from '../views/mixins/Mixins.vue'
+import Scan from '../views/浏览器扫码/scan.vue'
+import ScanApp from '../views/App扫码/ScanApp.vue'
 
 Vue.use(VueRouter)
 
@@ -13,7 +17,9 @@ const routes = [
   {
     path: '/slot',
     name: 'Slot',
-    component: () => import('../views/slot/Slot.vue')
+    //用了路由懒加载的方式打包成app会报错
+    // component: () => import(/* webpackChunkName: "slot" */'../views/slot/Slot.vue')
+    component: Slot
   },
   {
     path: '/props',
@@ -23,7 +29,8 @@ const routes = [
   {
     path: '/mixins',
     name: 'Mixins',
-    component: () => import('../views/mixins/Mixins.vue')
+    // component: () => import('../views/mixins/Mixins.vue')
+    component: Mixins
   },
   {
     path: '/emit',
@@ -100,17 +107,37 @@ const routes = [
   },
   {
     path: '/computed',
-    component: () => import('../views/计算属性/Computed.vue')
+    component: () => import(/* webpackChunkName: "computedd" */ '../views/计算属性/Computed.vue')
   },
   {
-    path: 'fuzzysearch',
+    path: '/fuzzysearch',
     component: () => import('../views/模糊搜索/FuzzySearch.vue')
   }
+  ,
+  {
+    path: '/IP',
+    component: () => import('../views/客户端IP/IP.vue')
+  }
+  ,
+  {
+    path: '/scan',
+    // component: () => import(/* webpackChunkName: "scan" */'../views/浏览器扫码/scan.vue')
+    component: Scan
+  },
+  {
+    path: '/scanapp',
+    component: ScanApp
+  },
+  {
+    path: '/watch',
+    component: () => import('../views/watch触发/watch.vue')
+  }
+  
 
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'history',  //打包成app使用hash,路径和图片才能正常
   base: process.env.BASE_URL,
   routes
 })

@@ -19,6 +19,10 @@
       <router-link to="/component">全局定义组件</router-link> |
       <router-link to="/computed">计算属性</router-link> |
       <router-link to="/fuzzysearch">模糊搜索</router-link> |
+      <router-link to="/IP">IP</router-link> |
+      <router-link to="/scan">浏览器扫码</router-link> |
+      <router-link to="/scanapp">App扫码</router-link> |
+      <router-link to="/watch">watch触发</router-link> |
     </div>
     <router-view/>
   </div>

@@ -22,7 +22,7 @@ export default {
         },
         //arguments对象是派发参数为多个时默认传的实参
         mulTest(x,y) {
-            //用Arrary.from(x)方法(只需length属性就行,不需要iterator接口);
+            //用Array.from(x)方法(只需length属性就行,不需要iterator接口);
             // 或者用扩展运算符把arguments对象(有iterator接口)转换成真实的数组;
             // 或者用Array.prototype.slice.call(arguments)
             console.log(Array.from(x)) //[1,2,3]
