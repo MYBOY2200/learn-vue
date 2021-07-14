@@ -23,6 +23,7 @@
       <router-link to="/scan">浏览器扫码</router-link> |
       <router-link to="/scanapp">App扫码</router-link> |
       <router-link to="/watch">watch触发</router-link> |
+      <router-link to="/v-model">v-model原理和组件中使用v-model</router-link> |
     </div>
     <router-view/>
   </div>

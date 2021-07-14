@@ -131,6 +131,10 @@ const routes = [
   {
     path: '/watch',
     component: () => import('../views/watch触发/watch.vue')
+  },
+  {
+    path: '/v-model',
+    component: () => import('../views/v-model原理/Vmodel.vue')
   }
   
 
