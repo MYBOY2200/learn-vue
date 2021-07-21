@@ -135,6 +135,10 @@ const routes = [
   {
     path: '/v-model',
     component: () => import('../views/v-model原理/Vmodel.vue')
+  },
+  {
+    path: '/payload',
+    component: () => import('../views/多层组件传值/Father.vue')
   }
   
 
