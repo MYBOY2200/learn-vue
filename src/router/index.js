@@ -139,6 +139,10 @@ const routes = [
   {
     path: '/payload',
     component: () => import('../views/多层组件传值/Father.vue')
+  },
+  {
+    path: '/echarts',
+    component: () => import('../views/echarts/echarts.vue')
   }
   
 
