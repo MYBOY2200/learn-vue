@@ -4,7 +4,7 @@
         <!-- 1+1位置value可以为任意表达式(包括boolean、number、string、对象、数组、变量等) -->
         <input type="text" v-focus:foo.bar.aaa="1+1">
 
-        <!-- 在组件中使用自定义指令时，el参数是此组件的根dom节点加上子节点，在el绑定style或者class会绑定到根节点上 -->
+        <!-- 在组件中使用自定义指令时，el参数是此组件的根dom节点加上子节点，在el绑定style或者class或者方法会绑定到根节点上(input是跟节点的子节点可以通过querySelector判断解决) -->
         <direct-comp v-focus></direct-comp>
 
         <!-- 不会触发自定义指令中的update钩子 -->
