@@ -143,9 +143,11 @@ const routes = [
   {
     path: '/echarts',
     component: () => import('../views/echarts/echarts.vue')
+  },
+  {
+    path: '/websocket',
+    component: () => import('../views/WebSocket/websocket.vue')
   }
-  
-
 ]
 
 const router = new VueRouter({
