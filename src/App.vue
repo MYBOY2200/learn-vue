@@ -27,6 +27,7 @@
       <router-link to="/payload">多层组件传值</router-link> |
       <router-link to="/echarts">echarts</router-link> |
       <router-link to="/websocket">websocket</router-link> |
+      <router-link to="/xiushifu">xiushifu</router-link> |
     </div>
     <router-view/>
   </div>

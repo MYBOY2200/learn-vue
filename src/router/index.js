@@ -147,6 +147,10 @@ const routes = [
   {
     path: '/websocket',
     component: () => import('../views/WebSocket/websocket.vue')
+  },
+  {
+    path: '/xiushifu',
+    component: () => import('../views/事件修饰符/Xiushifu.vue')
   }
 ]
 
