@@ -4,6 +4,9 @@
     <h1>{{ message }}</h1>
     <h2>{{ test }}</h2>
     <h3>{{ a }}</h3>
+    <h4>{{testObj.b}}</h4>
+    <!-- v-if也会触发updated -->
+    <h5 v-if="testObj.b">666</h5>
     <button @click="newMessage">new message</button><br />
     <button @click="testNew">test new</button>
   </div>
@@ -15,6 +18,7 @@ export default {
       message: "about page",
       test: "old",
       test1: "old test",
+      testObj:{b:2}
     };
   },
   beforeCreate() {
@@ -34,7 +38,7 @@ export default {
     // 如果根实例挂载到了一个文档内的元素上，当 mounted 被调用时 vm.$el 也在文档内。
     // 注意 mounted 不会保证所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以在 mounted 内部使用 vm.$nextTick
     // 该钩子在服务器端渲染期间(SSR)不被调用。(vue框架是客户端渲染(CSR))
-    console.log(this.$el.querySelector("h1").innerText);
+    // console.log(this.$el.querySelector("h1").innerText);
     // this.$nextTick(function () {
     //   // Code that will run only after the
     //   // entire view has been rendered
@@ -52,14 +56,16 @@ export default {
       //这样不行，需要this.$nextTick()才能马上从dom取到更新的值
       // console.log(this.$el.querySelector('h1').innerText)
       this.$nextTick(function () {
-        console.log(this.$el.querySelector("h1").innerText);
+        // console.log(this.$el.querySelector("h1").innerText);
       });
     },
     testNew() {
-      this.test = "new"; //会触发updated钩子（更改了绑定到dom上的data数据updated钩子才会触发，单单是改data数据或者是修改dom都不会触发）
-      this.test1 = "new test"; //不会触发updated钩子
-      this.$el.querySelector("h2").style.marginLeft = "100px"; //不会触发updated钩子
-      this.$el.querySelector("h2").innerText = "bingo"; //不会触发updated钩子
+      // this.test = "new"; //会触发updated钩子（更改了绑定到dom上的data数据updated钩子才会触发，单单是改data数据或者是修改dom都不会触发）
+      // this.test1 = "new test"; //不会触发updated钩子
+      // this.$el.querySelector("h2").style.marginLeft = "100px"; //不会触发updated钩子
+      // this.$el.querySelector("h2").innerText = "bingo"; //不会触发updated钩子
+      // this.testObj={b:3} //改变了在dom的引用(赋值新对象)每次都会触发updated(同时修改多个数据只会触发一次updated)
+      this.testObj.b=4 //只是改变某个字段的值触发了dom更新只会触发一次updated（更改的值是同一个）(这样的改变watch不会触发)
     },
   },
 };

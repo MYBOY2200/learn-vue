@@ -44,17 +44,18 @@ const routes = [
   },
   {
     path: '/from',
-    component: () => import('../views/query和params传参/from.vue')
+    component: () => import('../views/queryparams/from.vue')
   },
   {
     path: '/query',
-    component: () => import('../views/query和params传参/query.vue')
+    component: () => import('../views/queryparams/query.vue')
   },
   {
-    // path: '/:test', //不能这样写，不然后面声明的一级路由会取不到
-    path: '/params/:test',
+    // path: '/:test', //不能这样写，不然后面声明的一级路由会取不到;params在路由声明的参数刷新不会消失（这里刷新会报错，可能是项目问题，正常是不会报错的）
+    // 动态路由不一定是子路由
+    path: '/from/:test',
     name: 'params',
-    component: () => import('../views/query和params传参/params.vue')
+    component: () => import(/* webpackChunkName: "slot" */'../views/queryparams/params.vue')
   },
   {
     path: '/gouzi',

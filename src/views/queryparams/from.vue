@@ -13,6 +13,7 @@ export default {
             this.$router.push({
                 path: '/query',
                 query: {
+                    // 建议转成json字符串，不然刷新会有问题，参数变成[object Object]
                     test: {a:2,b:3}
                 }
             })
@@ -21,7 +22,7 @@ export default {
             this.$router.push({
                 name: 'params',
                 params: {
-                    test: {a:1,b:2}
+                    test: '001'
                 }
             })
         }

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!-- v-bind变量的方式需要用require语法，得到的是字符串 -->
+        <!-- v-bind变量的方式需要用require语法，得到的是字符串(使用ref给src赋值也需要require语法) -->
         <img :src="icon.img1" alt="">
         <!-- 直接赋值src可以用绝对路径或者相对路径 -->
         <img src="./qq.png" alt="">
