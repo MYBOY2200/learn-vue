@@ -1,6 +1,7 @@
 <template>
   <div>
     <slot-component>
+      <!-- aaa和slotProps名字都随意取 -->
       <template v-slot:aaa="slotProps">
         <div>
           <p>我是父组件的值:{{ test }}</p>

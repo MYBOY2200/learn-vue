@@ -51,7 +51,7 @@ const routes = [
     component: () => import('../views/queryparams/query.vue')
   },
   {
-    // path: '/:test', //不能这样写，不然后面声明的一级路由会取不到;params在路由声明的参数刷新不会消失（这里刷新会报错，可能是项目问题，正常是不会报错的）
+    // path: '/:test', //不能这样写，不然后面声明的一级路由会取不到;params在路由声明的参数刷新不会消失（这里刷新会报错,因为使用了publicPath:'./'(移动端打包需要),且是history路由；解决：要么换成绝对路径/，要么换成hash路由）
     // 动态路由不一定是子路由
     path: '/from/:test',
     name: 'params',
@@ -157,6 +157,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',  //打包成app使用hash,路径和图片才能正常
+  // mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })

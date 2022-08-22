@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  //父组件传子组件没定义的组件会到$attrs而不是根元素
+  //使用inheritAttrs: false，父组件传子组件没定义的property会到$attrs而不是根元素
   // 注意 inheritAttrs: false 选项不会影响 style 和 class 的绑定，依旧是可以绑定在根元素中。
   inheritAttrs: false,
   props: ["label", "value"],
